@@ -3,6 +3,7 @@ import { flushSync } from 'react-dom';
 import { puzzles, isReleased, checkAnswer } from './puzzles.js';
 import PuzzleCard from './components/PuzzleCard.jsx';
 import FinalLock from './components/FinalLock.jsx';
+import CubePuzzle from './components/CubePuzzle.jsx';
 
 const COMPLETION_STORAGE_KEY = 'detective-academy:completed:v1';
 
@@ -71,7 +72,7 @@ export default function App() {
   const editAnswer = (id, value) => setAnswers(previous => ({ ...previous, [id]: value.replace(/[^0-9]/g, '') }));
 
   if (restarted) {
-    return <main className="preparation-screen" role="status"><h1>学院正在筹备，请耐心等待</h1></main>;
+    return <CubePuzzle />;
   }
 
   return <>

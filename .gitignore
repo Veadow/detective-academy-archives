@@ -8,3 +8,4 @@ playwright-report/
 *.log
 *.zip
 .DS_Store
+.local-preview/
